@@ -1,5 +1,5 @@
 # kaos-tackle
-Dette er et fivem script, som er converted fra ESX til vRP
+Dette er et fivem script, converted fra ESX til vRP
 
 Original version: https://github.com/FiveM-Dev-Sverige/esx_ktackle
 
@@ -9,4 +9,3 @@ Spilleren der prøver at tackle skal have en permission som lyder: "police.pc" (
 
 ----------------
 God Fornøjelse :) - Mvh JustKa0s
-----------------
