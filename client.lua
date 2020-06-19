@@ -3,11 +3,13 @@ local isPolice = false
 local tackleLib, tackleAnim, tackleVictimAnim = 'missmic2ig_11', 'mic_2_ig_11_intro_goon', 'mic_2_ig_11_intro_p_one'
 local isTackling, isGettingTackled, isRagdoll = false, false, false
 
+vRP = Proxy.getInterface("vRP")
+
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
         
-        if IsControlPressed(1, 21) and IsControlJustPressed(1, 38) and not isTackling and not IsPedInAnyVehicle(GetPlayerPed(-1), false) and GetGameTimer() - lastTackleTime > 10 * 1000 then
+        if IsControlPressed(1, 21) and IsControlJustPressed(1, 38) and not isTackling and not IsPedInAnyVehicle(GetPlayerPed(-1), false) and GetGameTimer() - lastTackleTime > 10 * 1000  and vRP.isHandcuffed() == false and vRP.isInComa() == false then
                 Citizen.Wait(10)
                 TriggerServerEvent('kaos:tryTackle')
             end
